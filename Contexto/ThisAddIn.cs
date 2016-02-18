@@ -25,7 +25,7 @@ namespace Contexto
            // MessageBox.Show("Worked");
 
             var client = new WebClient();
-            var url = "http://10.10.30.168:8000/server/Contexto/ContextRequests.php?cmd=6";
+            var url = "http://localhost:8000/server/Contexto/ContextRequests.php?cmd=6";
             string requestResult = client.DownloadString(url);
             toFile();
             inspectors = this.Application.Inspectors;
@@ -78,7 +78,7 @@ namespace Contexto
                 // This method will send request to server for analysis.
 
                 var client = new WebClient();
-                var url = "http://10.10.26.53:8000/server/Contexto/ContextRequests.php?cmd=1&mailSubject=movie&mailSender=george";
+                var url = "http://localhost:8000/server/Contexto/ContextRequests.php?cmd=1&mailSubject=movie&mailSender=george";
                 string requestResult = client.DownloadString(url);
                 contextAnalysis.sendRequest();
             }
