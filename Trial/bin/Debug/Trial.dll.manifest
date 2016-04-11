@@ -88,6 +88,16 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="System.Numerics" version="4.0.0.0" publicKeyToken="B77A5C561934E089" language="neutral" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="System.Runtime.Serialization" version="4.0.0.0" publicKeyToken="B77A5C561934E089" language="neutral" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
       <assemblyIdentity name="System.Windows.Forms" version="4.0.0.0" publicKeyToken="B77A5C561934E089" language="neutral" />
     </dependentAssembly>
   </dependency>
@@ -186,14 +196,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Trial.dll" size="16384">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="522752">
+      <assemblyIdentity name="Newtonsoft.Json" version="8.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>347C4CRYKd3sW3nxkYw646P6VApaDjxBDitu8L68eSc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Trial.dll" size="44032">
       <assemblyIdentity name="Trial" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>BMwgS5nnrMD1iK13aSyJjde9ULBgr8M1/3BWfJgptRQ=</dsig:DigestValue>
+        <dsig:DigestValue>LU2Dt8XEKH4xROANM63v/6zD+66wnlDBM/Bhz0dISq8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -214,10 +236,12 @@
           <vstov4:appAddIn application="Outlook" loadBehavior="3" keyName="Trial">
             <vstov4:friendlyName>Trial</vstov4:friendlyName>
             <vstov4:description>Trial</vstov4:description>
-            <vstov4.1:ribbonTypes xmlns:vstov4.1="urn:schemas-microsoft-com:vsto.v4.1" />
+            <vstov4.1:ribbonTypes xmlns:vstov4.1="urn:schemas-microsoft-com:vsto.v4.1">
+              <vstov4.1:ribbonType name="Trial.contexto, Trial, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+            </vstov4.1:ribbonTypes>
           </vstov4:appAddIn>
         </vstov4:customization>
       </vstov4:customizations>
     </vstav3:application>
   </vstav3:addIn>
-<publisherIdentity name="CN=davie\David" issuerKeyHash="85853e59a1ac0fae23a477d2e5b0b573dd514c90" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>edg08I8p8wLUCdBZ6paF5Y8yOhFKjsPdtqXlK13up7w=</DigestValue></Reference></SignedInfo><SignatureValue>VsjY0wxUKu3+lff5YpbIcW05L4SZ5Ab/iu9xmSR0VgWmf3QqkMb78aZ/SwxSTLfH0CA0BQLASqEDAGpxlvl5IDV1OpdF5whWyUvk6r8dTC4QkdVpx2Bf90VCbXgahdz8tm12eSco8+ovLr554Q4ZHxuxIL+3CTwqS9Rm8/2gmno=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>7YZxbTrSajcZgUaN+9Y43CBY+Ta1bKwizisRE97bKZWi7exLCwB7EgwYiXGRRBK/gQkgM0d9jRLmmS7BbwSKCO1tkg7HMH1CCd96lYu7lHJjWFUmWvpcyws0gBie4O30sJgI4flUpPRYEqkkItJGvcjxE0NAWIc59Cl34MIUlb8=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="bca7ee5d2be5a5b6ddc38e4a113a328fe58596ea59d009d402f3298ff034d879" Description="" Url=""><as:assemblyIdentity name="Trial.dll" version="1.0.0.0" publicKeyToken="699cf24b7e78ce9f" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=davie\David</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>hPUNAIR0gIcDiQfUc9rT1I1mOpZD+E/UyszrBGO9+ZY=</DigestValue></Reference></SignedInfo><SignatureValue>FgWdLnLpvV5WJhqnR0cH/kT3yR2XnDHIw1SSgfX924ehwaIZbKWw1b7o1sXYFAnL4nT1bRjEoFia0Ny3oIJlL55ge3Myr+yxFZag/UkLNeeNN7YgJBQPIm6Yawf1cEQi8B58WwgF/c9KuZ3NKXH9RTE/JiZLyh/6SmkJPJP7/OE=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>7YZxbTrSajcZgUaN+9Y43CBY+Ta1bKwizisRE97bKZWi7exLCwB7EgwYiXGRRBK/gQkgM0d9jRLmmS7BbwSKCO1tkg7HMH1CCd96lYu7lHJjWFUmWvpcyws0gBie4O30sJgI4flUpPRYEqkkItJGvcjxE0NAWIc59Cl34MIUlb8=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBxTCCAS6gAwIBAgIQdPMsmbCkAbxPhXTgMz4UgTANBgkqhkiG9w0BAQsFADAhMR8wHQYDVQQDHhYAZABhAHYAaQBlAFwARABhAHYAaQBkMB4XDTE2MDIwOTE0MzYxM1oXDTE3MDIwODIwMzYxM1owITEfMB0GA1UEAx4WAGQAYQB2AGkAZQBcAEQAYQB2AGkAZDCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA7YZxbTrSajcZgUaN+9Y43CBY+Ta1bKwizisRE97bKZWi7exLCwB7EgwYiXGRRBK/gQkgM0d9jRLmmS7BbwSKCO1tkg7HMH1CCd96lYu7lHJjWFUmWvpcyws0gBie4O30sJgI4flUpPRYEqkkItJGvcjxE0NAWIc59Cl34MIUlb8CAwEAATANBgkqhkiG9w0BAQsFAAOBgQDlTPdRSb+REePoch47/7Ts8TD09GKxcyfjXbEHqHYLyiJtcj0iqpId/xV55kFh1nuNHeucPTK1+ffeCEgOdkkeH1oJwsElIrDCN0K2mFxm1/HvcF/VnIIVynEKXlQyz7vomhhvv+bjE0v7laFfubEGQ3V4cpV7gdHTMLn2+EmlHQ==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
+<publisherIdentity name="CN=davie\David" issuerKeyHash="85853e59a1ac0fae23a477d2e5b0b573dd514c90" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>hyBN0Fy6dOnaRr4QUVPVePhr4wifziRTyrXVYyYA5W8=</DigestValue></Reference></SignedInfo><SignatureValue>ymN3NEOx9svFsROrEKQlwGAkM2i2e4lJFwNOl5ULoKdnH/Yiki0doqs/5oxrfhJiM0zw/RagvClG5wd9W4mYb0jzR+ybHZtlktyA6dcbPamJBR2VpQpkpLk+KOd19GYV2h9IZMCfH/lWY+e28jF61uJX/bAeyOU4CxD4UbyyCXs=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>7YZxbTrSajcZgUaN+9Y43CBY+Ta1bKwizisRE97bKZWi7exLCwB7EgwYiXGRRBK/gQkgM0d9jRLmmS7BbwSKCO1tkg7HMH1CCd96lYu7lHJjWFUmWvpcyws0gBie4O30sJgI4flUpPRYEqkkItJGvcjxE0NAWIc59Cl34MIUlb8=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="6fe5002663d5b5ca5324ce9f08e36bf878d5535110be46dae974ba5cd04d2087" Description="" Url=""><as:assemblyIdentity name="Trial.dll" version="1.0.0.0" publicKeyToken="699cf24b7e78ce9f" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=davie\David</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>vtVGoEwxwK/aMvb8yrwH8c+0APPMKYHySG3PXkCkpAc=</DigestValue></Reference></SignedInfo><SignatureValue>CNdxYaV7hvcK3SKDtp/rtu3hnXJp0vTGhIbSXTacSfatoWwRBLWhuZFMQVpCGA801ca3pKF2bAV35duLxr+yy4v8eeHSngEaChdR+AHQ/yCXpVo40a328irsm1QvDuDAQYjLc26w4fOudblFjwBrsBhet89Dqcldqv6xSKw+Vds=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>7YZxbTrSajcZgUaN+9Y43CBY+Ta1bKwizisRE97bKZWi7exLCwB7EgwYiXGRRBK/gQkgM0d9jRLmmS7BbwSKCO1tkg7HMH1CCd96lYu7lHJjWFUmWvpcyws0gBie4O30sJgI4flUpPRYEqkkItJGvcjxE0NAWIc59Cl34MIUlb8=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBxTCCAS6gAwIBAgIQdPMsmbCkAbxPhXTgMz4UgTANBgkqhkiG9w0BAQsFADAhMR8wHQYDVQQDHhYAZABhAHYAaQBlAFwARABhAHYAaQBkMB4XDTE2MDIwOTE0MzYxM1oXDTE3MDIwODIwMzYxM1owITEfMB0GA1UEAx4WAGQAYQB2AGkAZQBcAEQAYQB2AGkAZDCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA7YZxbTrSajcZgUaN+9Y43CBY+Ta1bKwizisRE97bKZWi7exLCwB7EgwYiXGRRBK/gQkgM0d9jRLmmS7BbwSKCO1tkg7HMH1CCd96lYu7lHJjWFUmWvpcyws0gBie4O30sJgI4flUpPRYEqkkItJGvcjxE0NAWIc59Cl34MIUlb8CAwEAATANBgkqhkiG9w0BAQsFAAOBgQDlTPdRSb+REePoch47/7Ts8TD09GKxcyfjXbEHqHYLyiJtcj0iqpId/xV55kFh1nuNHeucPTK1+ffeCEgOdkkeH1oJwsElIrDCN0K2mFxm1/HvcF/VnIIVynEKXlQyz7vomhhvv+bjE0v7laFfubEGQ3V4cpV7gdHTMLn2+EmlHQ==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

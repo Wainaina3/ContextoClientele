@@ -101,8 +101,7 @@ namespace Trial
                             try
                             {
                                 Outlook.MAPIFolder destFolder = inBox.Folders["Temp"];
-                                moveToTempFolder(destFolder, moveMail);
-                              //  moveMail.Move(destFolder);
+                                moveMail.Move(destFolder);
                             }
                             catch (Exception ex)
                             {
@@ -116,11 +115,17 @@ namespace Trial
                     }
 
                 }
-                else if (IncomingMail.Categories.Equals("None"))
+
+                if (IncomingMail.Categories.Equals("None"))
                 {
                     IncomingMail.Categories = "";
                 }
+                else
+                {
 
+
+
+                }
             }
             catch( Exception nullEx)
             {
@@ -271,10 +276,10 @@ namespace Trial
             }
 
             //move the email to temp folder
-            //moveToTempFolder(tempFolder, moveMail);
+            moveToTempFolder(tempFolder, moveMail);
         }
 
-        private void moveToTempFolder(Outlook.MAPIFolder temp, Outlook.MailItem movingEmail)
+        private void moveToTempFolder(Outlook.Folder temp, Outlook.MailItem movingEmail)
         {
             movingEmail.Move(temp);
             movingEmail.Categories = "None";
