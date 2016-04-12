@@ -176,6 +176,10 @@ namespace Trial
             {
                 newContextFolder = inBox.Folders.Add(newFolderName,
                     Outlook.OlDefaultFolders.olFolderInbox);
+                Outlook.Items mailItems = newContextFolder.Items;
+                //add an event handler
+                mailItems.ItemAdd += new Outlook.ItemsEvents_ItemAddEventHandler(Globals.ThisAddIn.moveItemsEventHandler);
+               // mailItems.ItemChange += new Outlook.ItemsEvents_ItemChangeEventHandler(Globals.ThisAddIn.removedFromFolder);
             }
             catch (Exception ex)
             {

@@ -299,6 +299,56 @@ namespace Trial
 
         }
 
+        private void addListenerToFolders()
+        {
+            var client = new WebClient();
+            var url = "http://localhost:8000/server/Contexto/ContextRequests.php?cmd=13";
+            try
+            {
+                string jsonResult = client.DownloadString(url);
+
+                JObject obj = JObject.Parse(jsonResult);
+                if ((int)obj["result"] == 1)
+                {
+                    JArray contextArray = (JArray)obj["contexts"];
+
+                    for (var i = 0; i < contextArray.Count; i++)
+                    {
+                        JObject context = (JObject)contextArray[i];
+
+                        string contextName = context["context"].ToString();
+                        //get the folder with this name
+                        Outlook.MAPIFolder contextFolder = null;
+
+
+
+
+
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.ToString());
+            }
+        }
+
+        public void moveItemsEventHandler(object movedItem)
+        {
+            Outlook.MailItem movedEmail = (Outlook.MailItem)movedItem;
+            string subject = movedEmail.Subject;
+            string sender = GetSenderSMTPAddress(movedEmail);
+            string moveFrom = movedEmail.Categories;
+
+            object thisFolderName = movedEmail.Parent.ToString();
+
+            //send these data to the server now
+            
+
+
+
+
+        }
 
     }
 }
